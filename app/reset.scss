@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+/* Reset css*/
+
+html {
+    font-size: 10px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    &:focus {
+        outline: none;
+    }
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: "Microsoft Yahei", "微软雅黑", "SimSun", "宋体", "Verdana", "Arial";
+    font-weight: normal;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53
+}
+
+body {
+    _overflow: auto;
+    _height: 100%;
+    margin: 0 auto;
+}
+
+html {
+    _overflow: hidden
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: courier new, courier, monospace
+}
+
+small {
+    font-size: 12px
+}
+
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+    list-style: none
+}
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom
+}
+
+legend {
+    color: #000
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+img {
+    vertical-align: middle;
+}
+
+button,
+input,
+select,
+textarea {
+    font: 12px/1.5 tahoma, arial, sans-serif;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.clear {
+    display: block;
+    float: none;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    background: none;
+    border: 0;
+    font-size: 0
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/*a*/
+
+a {
+    text-decoration: none;
+    color: #555;
+    cursor: pointer;
+}
+
+a:hover,
+a:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+
+/*title*/
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+
+/*float*/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}

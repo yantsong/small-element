@@ -1,0 +1,33 @@
+.home-header {
+    padding: 0.1rem;
+    * {
+        color: #3e9abf;
+        font-size: 0.12rem;
+        line-height: 0.14rem;
+    }
+}
+
+.home-header-left {
+    width: 60px;
+    text-align: left;
+    margin: 5px 0;
+}
+
+.home-header-right {
+    span {
+        background-color: #3e9abf;
+        color: white;
+        display: inline-block;
+        border: 1px solid #3e9abf;
+        border-radius: 0.25rem 0 0 0.25rem;
+        padding: 0.04rem 0.05rem 0.04rem 0.1rem;
+        &:nth-of-type(2) {
+            border-radius: 0 0.25rem 0.25rem 0;
+            padding: 0.04rem 0.1rem 0.04rem 0.05rem;
+        }
+    }
+    span.active {
+        background-color: white;
+        color: #3e9abf;
+    }
+}

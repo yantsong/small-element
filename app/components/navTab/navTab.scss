@@ -1,0 +1,21 @@
+.navtab {
+    margin: 0.2rem 0 0.05rem;
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid #DDD;
+    h1 {
+        font-size: 0.16rem;
+        line-height: 0.20rem;
+        padding-left: 0.05rem;
+        border-left: 0.03rem orangered solid;
+        font-family: simhei;
+    }
+    a {
+        font-size: 0.12rem;
+        float: right;
+        vertical-align: middle;
+        color: red;
+        line-height: 0.20rem;
+        margin-right: 0.06rem;
+        cursor: default;
+    }
+}
