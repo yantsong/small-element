@@ -11,6 +11,7 @@ import LoadMore from '../../components/loadMore/loadMore'
 import { connect } from 'react-redux'
 import {getCourse} from '../../redux/actions/action.js'
 import {getDouBanApi} from '../../fetch/home/home.js'
+import './home.scss'
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -68,13 +69,27 @@ resultHandle(result){
         }
      render() {
          const {movieList} = this.state
-         console.log(movieList[0]);
         return (
             <div className="main">
                 <Header cityName = '上海'></Header>
               <Carousel></Carousel>
                <div className="container"><WillShow MovieNow={movieList}></WillShow></div> 
                 <MovieThumb MovieAction = {movieList[0]}></MovieThumb>
+                {
+                    this.state.movieList.length>0?
+                     <div className="hot">
+                    — 全国热门点映 —
+                     </div>:
+                     ''
+                }
+                {
+                    this.state.movieList.map(
+                        (item,index) =>{
+                            console.log(item.id);
+                            return <MovieThumb key={item.id} MovieAction={item}></MovieThumb>
+                        }
+                    )
+                }
               <LoadMore loading={this.state.isLoading}></LoadMore>
             </div>
         )

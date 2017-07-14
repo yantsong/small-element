@@ -37,9 +37,10 @@ module.exports = {
             { test: /\.(png|gif|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=8192&name=/resource/[name].[ext]' }
         ]
     },
-    // externals: {
-    //     'react': 'React'
-    // },
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM'
+    },
     plugins: [
         //提取公共模块
         new webpack.optimize.CommonsChunkPlugin({
