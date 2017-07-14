@@ -1,0 +1,33 @@
+.MovieThumb {
+    padding: 0.1rem;
+    .thumbleft {
+        width: 60%;
+    }
+    .thumbright {
+        width: 35%;
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+    .useraction {
+        img {
+            border-radius: 50%;
+            height: 0.2rem;
+            width: 0.2rem;
+            display: inline-block;
+        }
+        span,
+        i {
+            font-style: normal;
+            font-size: 0.12rem;
+            line-height: 0.2rem;
+            margin: 0 5px;
+            display: inline-block;
+        }
+        span {
+            margin: 0;
+            color: gray
+        }
+    }
+}

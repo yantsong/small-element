@@ -10,11 +10,14 @@
 
 .caro {
     text-align: center;
+    position: relative;
     span {
         display: inline-block;
         text-align: center;
-        position: relative;
-        top: -20px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -27px;
     }
     i {
         width: 8px;

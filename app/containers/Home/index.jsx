@@ -3,6 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { bindActionCreators } from 'redux'
 import Header from '../../components/header/index'
 import Footer from '../../components/Footer'
+import MovieThumb from '../../components/MovieThumb/MovieThumb'
 import {getHomeData} from './../../fetch/home/home.js'
 import Carousel from './../../components/carousel/carousel.jsx'
 import WillShow from './willShow/willShow.jsx'
@@ -33,44 +34,47 @@ resultHandle(result){
        this.props.getDataActions(this.state.movieList)
    })
 }
-getData(){
-
-    this.setState({
-        isLoading:true
-    })
-   let result = getDouBanApi();
-   this.resultHandle(result);
-}
-componentDidMount(){
-
-this.getData();
-let gdfc
-window.addEventListener('scroll',function(){
-    //节流,每次都会清除上一次定时器，直到没有新的动作,计时器才会执行
-    clearTimeout(gdfc)
-    gdfc = setTimeout( () => {
-    let inHt = window.innerHeight;
-    //卷起高度
-    let sHt = document.body.scrollTop;
-    //可用高度
-    let cHt = document.body.scrollHeight;
-
-    if( inHt + sHt == cHt){
-        this.getData();
+    getData(){
+            this.setState({
+                isLoading:true
+            })
+        let result = getDouBanApi();
+        this.resultHandle(result);
     }
-   },1000)
-   
-    //窗口高度
-   
+        componentDidMount(){
+            //获取数据
+        this.getData();
+        //无线下滑开关
+        let gdfc
+        window.addEventListener('scroll',function(){
+            //节流,每次都会清除上一次定时器，直到没有新的动作,计时器才会执行
+            clearTimeout(gdfc)
+            gdfc = setTimeout( () => {
+            let inHt = window.innerHeight;
+            //卷起高度
+            let sHt = document.body.scrollTop;
+            //可用高度
+            let cHt = document.body.scrollHeight;
 
-}.bind(this))
-}
+            if( inHt + sHt == cHt){
+                this.getData();
+            }
+        },1000)
+        
+            //窗口高度
+        
+
+        }.bind(this))
+        }
      render() {
+         const {movieList} = this.state
+         console.log(movieList[0]);
         return (
             <div className="main">
                 <Header cityName = '上海'></Header>
               <Carousel></Carousel>
-               <div className="container"><WillShow MovieNow={this.state.movieList}></WillShow></div> 
+               <div className="container"><WillShow MovieNow={movieList}></WillShow></div> 
+                <MovieThumb MovieAction = {movieList[0]}></MovieThumb>
               <LoadMore loading={this.state.isLoading}></LoadMore>
             </div>
         )
@@ -80,6 +84,7 @@ window.addEventListener('scroll',function(){
 
 function mapStateToProps(state) {
     return {
+       
     }
 }
 
