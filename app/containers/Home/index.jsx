@@ -11,6 +11,7 @@ import LoadMore from '../../components/loadMore/loadMore'
 import { connect } from 'react-redux'
 import {getCourse} from '../../redux/actions/action.js'
 import {getDouBanApi} from '../../fetch/home/home.js'
+import { Spin } from 'antd';
 import './home.scss'
 
 class Home extends React.Component {
@@ -19,7 +20,8 @@ class Home extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
          this.state={
             movieList:[],
-            isLoading:false
+            isLoading:false,
+            dataLoading:true
         }
 }
 resultHandle(result){
@@ -29,7 +31,8 @@ resultHandle(result){
        let json = js.subjects;
        this.setState({
            movieList: this.state.movieList.concat(json),
-           isLoading:false
+           isLoading:false,
+           dataLoading:false
        }) 
         console.log(json);
        this.props.getDataActions(this.state.movieList)
@@ -71,11 +74,16 @@ resultHandle(result){
          const {movieList} = this.state
         return (
             <div className="main">
-                <Header cityName = '上海'></Header>
-              <Carousel></Carousel>
+                    <Header cityName = '上海'></Header>
+                {
+                    this.state.dataLoading?
+                    <Spin size="large" className="spin"></Spin>:
+                    <div>
+                 <Carousel></Carousel>
                <div className="container"><WillShow MovieNow={movieList}></WillShow></div> 
                 <MovieThumb MovieAction = {movieList[0]}></MovieThumb>
-                {
+                <div>
+                 {
                     this.state.movieList.length>0?
                      <div className="hot">
                     — 全国热门点映 —
@@ -90,7 +98,12 @@ resultHandle(result){
                         }
                     )
                 }
+                </div>
+              
+              
               <LoadMore loading={this.state.isLoading}></LoadMore>
+              </div>
+                }
             </div>
         )
     }

@@ -126,4 +126,41 @@ devServer: {
                 </div>
             </div>
 ```
- 
+ #### 使用 组件库--  ant-design(阿里react-ui库)
+ * npm i --save ant-design
+ * 使用 babel-plugin-import  也npm 一下//*作用是按需加载*
+ * 在package.json中配置options 
+ ```
+  "plugins": [
+      "add-module-exports",
+      "transform-object-assign",
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "style": true
+        }
+      ]
+    ]
+ ```
+ * style默认true是less文件,所以需要加一个lessloader//自行安装 不赘述
+ * import {组件名} from 'antd' 即可使用
+ #### css问题
+##### 无宽度垂直居中(flex)
+* [完整分析](http://www.jianshu.com/p/913f8dff1388?open_source=weibo_search)
+```
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  margin: auto;
+}
+//这种最靠谱
+  position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+```

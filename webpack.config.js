@@ -22,8 +22,9 @@ module.exports = {
 
         loaders: [
             //单独css
-            { test: /\.css$/, loader: ExtractTextWebpackPlugin.extract({ use: "style-loader", ues: "css-loader" }) },
-            { test: /\.scss$/, loader: 'style!css!sass' },
+            { test: /\.css$/, loader: ExtractTextWebpackPlugin.extract({ use: "style-loader", ues: "css-loader", ues: "postcss-loader" }) },
+            { test: /\.less$/, loader: 'style!css!postcss!less' },
+            { test: /\.scss$/, loader: 'style!css!postcss!sass' },
             {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',

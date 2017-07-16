@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MovieImg from '../../components/MovieImg/MovieImg'
 import './MovieThumb.scss'
 
 class MovieThumb extends Component {
@@ -47,8 +48,8 @@ class MovieThumb extends Component {
                 }
               
             </div>
-            <div className="thumbrigth pull-right">
-                <img src={imgsrc} alt=""/>
+            <div className="thumbright pull-right">
+                  <MovieImg imgsrc = {imgsrc}></MovieImg>
             </div>
             <div className="line"></div>
         </div>)

@@ -1,0 +1,30 @@
+.movie-img {
+    position: relative;
+    overflow: hidden;
+    img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.3rem;
+        color: white;
+        font-weight: 600;
+    }
+    p {
+        width: 70px;
+        position: absolute;
+        right: -18px;
+        top: 10px;
+        font-size: 10px;
+        background-color: silver;
+        color: steelblue;
+        text-align: center;
+        transform: rotate(43deg);
+        letter-spacing: -1px;
+        line-height: 13px;
+    }
+}
