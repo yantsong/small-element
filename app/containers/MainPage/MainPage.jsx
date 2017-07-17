@@ -3,6 +3,7 @@ import{Link} from 'react-router'
 import MainNav from './MainNav/MainNav'
 import Home from '../Home/index'
 import UserPage from './UserPage/UserPage'
+import './MainPage.scss'
 
 class MainPage extends Component {
     componentDidMount(){
@@ -12,10 +13,11 @@ class MainPage extends Component {
         return (
             <div>
                 {this.props.children}
-       <h1>
-           <Link to="/mainpage/homepage">111</Link>
-           <Link to="/mainpage/userpage">222</Link>
-       </h1>
+                <div className = "navlink">
+                    <Link to="/mainpage/homepage"> <span>购票观影</span> <i></i></Link>
+                    <Link to="/mainpage/userpage"> <span>发起点映</span> <i></i></Link>
+                    <Link to="/mainpage/userpage"> <span>我的</span> <i></i></Link>
+                </div>
             </div>
         );
     }
