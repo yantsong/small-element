@@ -34,7 +34,6 @@ resultHandle(result){
            isLoading:false,
            dataLoading:false
        }) 
-        console.log(json);
        this.props.getDataActions(this.state.movieList)
    })
 }
@@ -93,14 +92,11 @@ resultHandle(result){
                 {
                     this.state.movieList.map(
                         (item,index) =>{
-                            console.log(item.id);
                             return <MovieThumb key={item.id} MovieAction={item}></MovieThumb>
                         }
                     )
                 }
                 </div>
-              
-              
               <LoadMore loading={this.state.isLoading}></LoadMore>
               </div>
                 }

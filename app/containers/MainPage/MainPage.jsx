@@ -3,11 +3,26 @@ import{Link} from 'react-router'
 import MainNav from './MainNav/MainNav'
 import Home from '../Home/index'
 import UserPage from './UserPage/UserPage'
+import {connect} from 'react-redux'
+import {getDouBanApi} from '../../fetch/home/home.js'
+import {addUserInfo} from '../../redux/actions/action.js'
+import {getCourse} from '../../redux/actions/action.js'
 import './MainPage.scss'
 
 class MainPage extends Component {
     componentDidMount(){
-        console.log(this.props);
+      getDouBanApi().then(
+          (res)=>{
+           return res.json()
+          }
+      ).then(
+          (json) =>{
+            const data = json.subjects[0].casts[0];
+           
+            this.props.initData(json)
+            this.props.addUser(data)
+          }
+      )
     }
     render() {
         return (
@@ -35,5 +50,26 @@ class MainPage extends Component {
     }
 }
 
-export default MainPage;
+// redux 
+ const mapDispatchToProps = (dispatch) => {
+    return {
+        initData: (data) => {
+            dispatch(getCourse(data))
+        },
+        addUser: (data) => {
+            dispatch(addUserInfo(data))
+        }
+    }
+}
+const mapStateToProps = () => {
+    return {
+    }
+}
+const containerName = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(MainPage);
+
+export default containerName;
+// export default MainPage;
 
