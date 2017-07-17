@@ -14,9 +14,21 @@ class MainPage extends Component {
             <div>
                 {this.props.children}
                 <div className = "navlink">
-                    <Link to="/mainpage/homepage"> <span>购票观影</span> <i></i></Link>
-                    <Link to="/mainpage/userpage"> <span>发起点映</span> <i></i></Link>
-                    <Link to="/mainpage/userpage"> <span>我的</span> <i></i></Link>
+                    <Link to="/mainpage/homepage" activeClassName = "active"> 
+                    <i className="iconfont icon-dianyingpiao "></i>
+                    <br/> 
+                    <span>购票观影</span>
+                    </Link>
+                    <Link to="/mainpage/userpage"> 
+                    <i className="iconfont icon-tianjia "></i>
+                     <br/>
+                    <span>发起点映</span>
+                    </Link>
+                    <Link to="/mainpage/userpage" activeClassName = "active"> 
+                     <i className="icon-dianyingren iconfont"></i>
+                     <br/>
+                    <span>我的</span>
+                    </Link>
                 </div>
             </div>
         );
@@ -24,3 +36,4 @@ class MainPage extends Component {
 }
 
 export default MainPage;
+

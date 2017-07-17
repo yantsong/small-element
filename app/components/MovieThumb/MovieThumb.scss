@@ -10,13 +10,13 @@
         left: 0.1rem;
     }
     .progress {
-        height: 0.08rem;
+        height: 8px;
         margin: 0;
         padding: 0;
     }
     .nocompelet {
         span {
-            font-size: 0.15rem;
+            font-size: 15px;
             line-height: 0.3rem;
             color: #3e9abf;
             margin-right: 0.05rem;
@@ -28,12 +28,12 @@
             display: inline-block;
             font-style: normal;
             line-height: 0.3rem;
-            font-size: 0.12rem;
+            font-size: 12px;
         }
     }
     .compeleted {
         span {
-            font-size: 0.15rem;
+            font-size: 15px;
             line-height: 0.3rem;
             color: #3e9abf;
             margin-right: 0.05rem;
@@ -44,7 +44,7 @@
             display: inline-block;
             color: white;
             line-height: 0.15rem;
-            font-size: 0.1rem;
+            font-size: 10px;
             background-color: #e0e0e0;
             border-radius: 0.1rem;
             padding: 0 0.08rem;
@@ -56,7 +56,7 @@
         padding-bottom: 0.12rem;
     }
     dt {
-        font-size: 0.16rem;
+        font-size: 16px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -89,7 +89,7 @@
         span,
         i {
             font-style: normal;
-            font-size: 0.12rem;
+            font-size: 12px;
             line-height: 0.2rem;
             margin: 0 5px;
             display: inline-block;

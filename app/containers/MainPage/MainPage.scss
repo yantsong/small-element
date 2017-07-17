@@ -1,11 +1,63 @@
+@font-face {
+    font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_aej10jt0y919k9.eot?t=1500259045384');
+    /* IE9*/
+    src: url('//at.alicdn.com/t/font_aej10jt0y919k9.eot?t=1500259045384#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_aej10jt0y919k9.woff?t=1500259045384') format('woff'), /* chrome, firefox */
+    url('//at.alicdn.com/t/font_aej10jt0y919k9.ttf?t=1500259045384') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_aej10jt0y919k9.svg?t=1500259045384#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tianjia:before {
+    content: "\e626";
+}
+
+.icon-dianyingren:before {
+    content: "\e612";
+}
+
+.icon-dianyingpiao:before {
+    content: "\e60b";
+}
+
 .navlink {
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
+    background-color: #efefef;
+    height: 0.5rem;
+    box-shadow: inset 0px 2px 1px -1px #c8c7cc;
     a {
         display: inline-block;
         width: 33%;
         text-align: center;
+        height: 0.5rem;
+        vertical-align: top;
+    }
+    i {
+        font-size: 0.2rem;
+    }
+    a.active i {
+        color: #218F8C;
+    }
+    a:nth-of-type(2) {
+        margin-top: -0.15rem;
+        i {
+            color: #218F8C;
+            font-size: 0.3rem;
+        }
+    }
+    span {
+        font-size: 0.12rem;
     }
 }
