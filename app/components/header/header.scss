@@ -1,7 +1,7 @@
 .home-header {
     padding: 0.1rem;
     * {
-        color: #3e9abf;
+        color: #218F8C;
         font-size: 12px;
         line-height: 14px;
     }
@@ -15,10 +15,10 @@
 
 .home-header-right {
     span {
-        background-color: #3e9abf;
+        background-color: #218F8C;
         color: white;
         display: inline-block;
-        border: 1px solid #3e9abf;
+        border: 1px solid #218F8C;
         border-radius: 25px 0 0 25px;
         padding: 4px 5px 4px 10px;
         &:nth-of-type(2) {
@@ -28,6 +28,6 @@
     }
     span.active {
         background-color: white;
-        color: #3e9abf;
+        color: #218F8C;
     }
 }

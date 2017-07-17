@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import './willShow.scss'
-import NavTab from '../../../components/navTab/navtab'
 
 class WillShow extends Component {
    constructor(props, context) {

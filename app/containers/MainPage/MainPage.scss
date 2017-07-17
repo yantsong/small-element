@@ -35,29 +35,29 @@
     bottom: 0;
     left: 0;
     background-color: #efefef;
-    height: 0.5rem;
+    height: 50px;
     box-shadow: inset 0px 2px 1px -1px #c8c7cc;
     a {
         display: inline-block;
         width: 33%;
         text-align: center;
-        height: 0.5rem;
+        height: 50px;
         vertical-align: top;
     }
     i {
-        font-size: 0.2rem;
+        font-size: 20px;
     }
     a.active i {
         color: #218F8C;
     }
     a:nth-of-type(2) {
-        margin-top: -0.15rem;
+        margin-top: -15px;
         i {
             color: #218F8C;
-            font-size: 0.3rem;
+            font-size: 30px;
         }
     }
     span {
-        font-size: 0.12rem;
+        font-size: 12px;
     }
 }
