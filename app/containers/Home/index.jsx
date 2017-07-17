@@ -11,7 +11,6 @@ import LoadMore from '../../components/loadMore/loadMore'
 import { connect } from 'react-redux'
 import {getCourse} from '../../redux/actions/action.js'
 import {getDouBanApi} from '../../fetch/home/home.js'
-import { Spin } from 'antd';
 import './home.scss'
 
 class Home extends React.Component {
@@ -20,8 +19,7 @@ class Home extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
          this.state={
             movieList:[],
-            isLoading:false,
-            dataLoading:true
+            isLoading:false
         }
 }
 resultHandle(result){
@@ -32,9 +30,7 @@ resultHandle(result){
        this.setState({
            movieList: this.state.movieList.concat(json),
            isLoading:false,
-           dataLoading:false
        }) 
-       this.props.getDataActions(this.state.movieList)
    })
 }
     getData(){
@@ -46,7 +42,7 @@ resultHandle(result){
     }
         componentDidMount(){
             //获取数据
-        this.getData();
+        // this.getData();
         //无线下滑开关
         let gdfc
         window.addEventListener('scroll',function(){
@@ -66,40 +62,32 @@ resultHandle(result){
         
             //窗口高度
         
-
         }.bind(this))
         }
      render() {
-         const {movieList} = this.state
+         const {movieList} = this.props
         return (
             <div className="main">
                     <Header cityName = '上海'></Header>
-                {
-                    this.state.dataLoading?
-                    <Spin size="large" className="spin"></Spin>:
+              
                     <div>
                  <Carousel></Carousel>
                <div className="container"><WillShow MovieNow={movieList}></WillShow></div> 
                 <MovieThumb MovieAction = {movieList[0]}></MovieThumb>
                 <div>
-                 {
-                    this.state.movieList.length>0?
                      <div className="hot">
-                    — 全国热门点映 —
-                     </div>:
-                     ''
-                }
-                {
-                    this.state.movieList.map(
+                        — 全国热门点映 —
+                     </div>
+                {  
+                    this.props.movieList.map(
                         (item,index) =>{
-                            return <MovieThumb key={item.id} MovieAction={item}></MovieThumb>
+                            return <MovieThumb key={index} MovieAction={item}></MovieThumb>
                         }
                     )
                 }
                 </div>
               <LoadMore loading={this.state.isLoading}></LoadMore>
               </div>
-                }
             </div>
         )
     }
@@ -108,13 +96,12 @@ resultHandle(result){
 
 function mapStateToProps(state) {
     return {
-       
+       movieList:state.getMoreData
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        getDataActions: bindActionCreators(getCourse, dispatch),
     }
 }
 
