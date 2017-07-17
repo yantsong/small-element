@@ -164,3 +164,7 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
 ```
+#### react-router占位
+* activeclass 
+* indexrouter
+#### redux深入占位,流程,注意事项。以及redux-devtools的使用
