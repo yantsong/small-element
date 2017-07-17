@@ -5,7 +5,7 @@
         width: 100%;
         vertical-align: middle;
     }
-    i {
+    a {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -27,4 +27,27 @@
         letter-spacing: -1px;
         line-height: 13px;
     }
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_t10yi6ajp5ezh0k9.eot?t=1500278331872');
+    /* IE9*/
+    src: url('//at.alicdn.com/t/font_t10yi6ajp5ezh0k9.eot?t=1500278331872#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_t10yi6ajp5ezh0k9.woff?t=1500278331872') format('woff'), /* chrome, firefox */
+    url('//at.alicdn.com/t/font_t10yi6ajp5ezh0k9.ttf?t=1500278331872') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_t10yi6ajp5ezh0k9.svg?t=1500278331872#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bofang-copy:before {
+    content: "\e600";
 }

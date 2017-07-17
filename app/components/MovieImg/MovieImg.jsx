@@ -6,7 +6,7 @@ class MovieImg extends Component {
         return (
             <div className="movie-img">
                    <p>超前点映</p>
-                    <i className="glyphicon glyphicon-play-circle"></i>
+                    <a href="#" className = "iconfont icon-bofang-copy"></a>
                     <img src={this.props.imgsrc} alt=""/>          
             </div>
         );
