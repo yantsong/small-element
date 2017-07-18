@@ -1,6 +1,10 @@
 .user-page {
-    padding: 0 10px;
+    background-color: gray;
+    height: 100%;
     h1 {
+        padding: 0 10px;
+        background-color: whitesmoke;
+        margin-bottom: 0.1rem;
         img {
             border-radius: 50%;
             width: 60px;
@@ -23,5 +27,26 @@
             float: right;
             font-style: normal;
         }
+    }
+    ul {
+        padding: 0 10px;
+        margin-bottom: 0.1rem;
+        background-color: whitesmoke;
+    }
+    li {
+        font-size: 16px;
+        line-height: 0.5rem;
+        font-weight: 600;
+        i {
+            font-style: normal;
+            float: right;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+    p {
+        line-height: 0.5rem;
+        background-color: whitesmoke
     }
 }
