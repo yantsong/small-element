@@ -1,0 +1,89 @@
+.movie-list-page {
+    .search {
+        padding: 8px 10px;
+        background-color: #F7F7F7;
+        position: relative;
+        color: #909095;
+        input {
+            width: 100%;
+            height: 30px;
+            border-radius: 15px 15px;
+            border: none;
+            text-indent: 30px;
+            line-height: 0.3rem;
+            font-size: 15px
+        }
+        i {
+            font-size: 15px;
+            line-height: 0.3rem;
+            display: inline-block;
+            position: absolute;
+            left: 20px;
+        }
+    }
+    .tag-list {}
+    .movie-list {
+        padding: 0 10px;
+        li {
+            height: 1.24rem;
+            padding: 10px;
+            box-shadow: inset 0px -1px 1px -1px #c8c7cc;
+        }
+        .list-left {
+            width: 25%;
+            float: left;
+        }
+        .list-right {
+            width: 75%;
+            float: right;
+            padding-left: 10px;
+            h2 {
+                line-height: 0.28rem;
+                font-size: 15px;
+                display: inline-block;
+            }
+        }
+        p {
+            margin-top: 0.33rem;
+            line-height: 0.26rem;
+            font-size: 15px;
+            color: #777777;
+            span {
+                margin-right: 5px;
+            }
+            em {
+                width: 55px;
+                font-size: 12px;
+                height: 0.26rem;
+                border-radius: 13px;
+                text-align: center;
+                float: right;
+                color: white;
+                background-color: #FF595F;
+            }
+        }
+    }
+    dt {
+        span {
+            float: right;
+            line-height: 0.28rem;
+            color: #28AEAC;
+            font-size: 12px;
+            em {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+    }
+    dd {
+        font-size: 15px;
+        color: #777777;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        span {
+            margin-right: 5px;
+        }
+    }
+}

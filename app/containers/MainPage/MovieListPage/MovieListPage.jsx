@@ -5,7 +5,6 @@ import './MovieListPage.scss'
 class MovieListPage extends Component {
     render () {
         const movielist = this.props.movielist;
-        console.log(111,movielist);
         return (
             <div className="movie-list-page">
                 <div className="search">
@@ -24,13 +23,14 @@ class MovieListPage extends Component {
                                 const imgsrc = item.images.medium
                                 const title = item.title
                                 const {casts} = item
-                                return <li>
+                                const {average} = item.rating
+                                return <li key={index} className="{clearfix}">
                                         <div className="list-left">
                                             <MovieImg imgsrc = {imgsrc}></MovieImg>
                                         </div>
                                         <div className="list-right">
                                             <dl>
-                                                <dt>{title}</dt>
+                                                <dt className="clearfix"><h2>{title}</h2> <span><em>{average}</em>分</span></dt>
                                                 <dd>
                                                     <span>主演:</span>
                                                     {
