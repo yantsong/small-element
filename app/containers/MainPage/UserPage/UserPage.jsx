@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
  import {connect} from 'react-redux'
+ import QA from '../../../components/QA/QA.jsx'
 //conc contructor快捷
 import './UserPage.scss'
 class UserPage extends Component {
@@ -26,10 +27,7 @@ class UserPage extends Component {
                         <span>我想点映</span><i>></i>
                     </li>
                 </ul>
-                <p>
-                    <i>?</i>
-                    常见问题解答
-                </p>
+                <QA></QA>
             </div>
         );
     }

@@ -3,6 +3,7 @@ import{Link} from 'react-router'
 import MainNav from './MainNav/MainNav'
 import Home from '../Home/index'
 import UserPage from './UserPage/UserPage'
+import MovieListPage from './MovieListPage/MovieListPage'
 import {connect} from 'react-redux'
 import {getDouBanApi} from '../../fetch/home/home.js'
 import {addUserInfo} from '../../redux/actions/action.js'
@@ -69,7 +70,7 @@ class MainPage extends Component {
                     <br/> 
                     <span>购票观影</span>
                     </Link>
-                    <Link to="/mainpage/userpage" onClick = {(e) => this.clickdefault(e)}> 
+                    <Link to="/mainpage/movielistpage" onClick = {(e) => this.clickdefault(e)}> 
                     <i className="iconfont icon-tianjia "></i>
                      <br/>
                     <span>发起点映</span>
