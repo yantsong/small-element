@@ -3,6 +3,9 @@ import React, { Component } from 'react'
 import MovieImg from '../../../components/MovieImg/MovieImg'
 import './MovieListPage.scss'
 class MovieListPage extends Component {
+//     static contextTypes = {
+//     router: React.PropTypes.object
+//   }
     constructor (props, context) {
         super(props, context)
         this.state = {
@@ -52,7 +55,8 @@ class MovieListPage extends Component {
                                 const title = item.title
                                 const {casts} = item
                                 const {average} = item.rating
-                                return <li key={index}>
+                                const {id} = item
+                                return <li key={index} onClick = {this.routeJump.bind(this,id)}>
                                         <div className="list-left">
                                             <MovieImg imgsrc = {imgsrc}></MovieImg>
                                         </div>
@@ -167,7 +171,16 @@ class MovieListPage extends Component {
             }
         )
      }       
+    routeJump(id){
+        const path = `detail/${id}`
+        console.log(this.context);
+        this.context.router.push(path)
+    }
 }
+MovieListPage.contextTypes = {
+    router: React.PropTypes.object
+  }
+    
 
 const mapStateToProps = (state) =>{
     return {

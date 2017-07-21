@@ -167,4 +167,31 @@ main {
 #### react-router占位
 * activeclass 
 * indexrouter
+##### 路由的跳转,这里展开讲一下
+* link 相当于A标签 不多讲了 
+```
+<Link to="/about"> About </Link>
+
+```
+* this.context.router.push(path)
+  1. 首先需要使用context,需要对类添加 contextTypes属性, es6语法不能在类中定义类相关的信息,所以需要在类的外面定义即
+  
+
+  ```
+  class ComponentName extends Componnet{.....}//类继承,定义了一大堆 
+  ComponentName.contextTypes = {
+    router: React.PropTypes.object
+  }
+  ```
+  2. 现在可以使用router了,将this.context.router(要跳转的路径)写到某一个回调函数中即可
+  3. 还可以通过
+  ```
+  import { browserHistory } from 'react-router'
+  browserHistory.push(path)来跳转
+  ```
+  4.若是带参数的路由
+  ```
+  exp: path = './detail/参数' component = {target}
+  在target中可以通过this.props.parma.参数来取得
+  ```
 #### redux深入占位,流程,注意事项。以及redux-devtools的使用

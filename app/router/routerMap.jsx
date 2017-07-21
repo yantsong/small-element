@@ -22,7 +22,7 @@ class RouteMap extends React.Component {
                             <Route path='/mainpage/userpage' component={UserPage}/>
                             <Route path='/mainpage/movielistpage' component={MovieListPage}/>
                      </Route> 
-                    <Route path='/detail' component={Detail}/>
+                    <Route path='/detail/:id' component={Detail}/>
                     <Route path='*' component={NotFound}/>
                 </Route>
             </Router>

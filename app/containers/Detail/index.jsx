@@ -10,12 +10,9 @@ class Detail extends React.Component {
         return (
             <div>
                 <h1>Detail</h1>
+                {this.props.params.id}
             </div>
         )
     }
 }
-module.exports = Detail
-// export default Detail;
-
-// 使用 require.ensure 异步加载，还不支持 ES6 的 export 
-// export default Detail
+export default Detail;
