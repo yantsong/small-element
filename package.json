@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "webpack-dev-server --inline --port 8088 "
+        "dev": "webpack-dev-server --inline --port 8089 --host 172.20.10.2"
     },
     "author": "song",
     "license": "MIT",

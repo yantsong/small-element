@@ -27,26 +27,14 @@ class MainPage extends Component {
     }
 
     componentDidMount(){
-    //   getDouBanApi().then(
-    //       (res)=>{
-    //        return res.json()
-    //       }
-    //   ).then(
-    //       (json) =>{
-    //           //初始化数据 => redux
-    //         const user = json.subjects[0].casts[0];
-    //         const movielist = json.subjects;
-    //         const mymovie = json.subjects[0]
-    //         this.props.initData(movielist)
-    //         this.props.addUser(user)
-    //         this.props.addMovie(mymovie)
-    //         this.setState({
-    //             dataLoading:false
-    //         })
-    //       }
-    //   )
-    let json = movieMock;
-      const user = json.subjects[0].casts[0];
+      getDouBanApi().then(
+          (res)=>{
+           return res.json()
+          }
+      ).then(
+          (json) =>{
+              //初始化数据 => redux
+            const user = json.subjects[0].casts[0];
             const movielist = json.subjects;
             const mymovie = json.subjects[0]
             this.props.initData(movielist)
@@ -55,6 +43,18 @@ class MainPage extends Component {
             this.setState({
                 dataLoading:false
             })
+          }
+      )
+    // let json = movieMock;
+    //   const user = json.subjects[0].casts[0];
+    //         const movielist = json.subjects;
+    //         const mymovie = json.subjects[0]
+    //         this.props.initData(movielist)
+    //         this.props.addUser(user)
+    //         this.props.addMovie(mymovie)
+    //         this.setState({
+    //             dataLoading:false
+    //         })
 
     }
     render() {

@@ -1,8 +1,11 @@
 .movie-list-page {
     .search {
-        padding: 8px 10px;
+        padding: 8px;
+        width: 100%;
         background-color: #F7F7F7;
-        position: relative;
+        position: fixed;
+        top: 0;
+        z-index: 9;
         color: #909095;
         input {
             width: 100%;
@@ -10,7 +13,7 @@
             border-radius: 15px 15px;
             border: none;
             text-indent: 30px;
-            line-height: 0.3rem;
+            line-height: 30px;
             font-size: 15px
         }
         i {
@@ -21,7 +24,34 @@
             left: 20px;
         }
     }
-    .tag-list {}
+    .tag-list {
+        background-color: #F1F1F1;
+        padding: 0 10px;
+        margin-top: 46px;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        li {
+            font-size: 13px;
+            line-height: 22px;
+            height: 22px;
+            width: 13%;
+            margin: 0.05rem 0.05rem;
+            text-align: center;
+            border-radius: 10%;
+            overflow: hidden;
+            border: 1px solid #65C2C1;
+            background-color: transparent;
+            color: #65C2C1;
+        }
+        li.active {
+            background-color: #28AEAC;
+            border-color: #28AEAC;
+            color: white;
+        }
+    }
     .movie-list {
         padding: 0 10px;
         li {
@@ -42,24 +72,24 @@
                 font-size: 15px;
                 display: inline-block;
             }
-        }
-        p {
-            margin-top: 0.33rem;
-            line-height: 0.26rem;
-            font-size: 15px;
-            color: #777777;
-            span {
-                margin-right: 5px;
-            }
-            em {
-                width: 55px;
-                font-size: 12px;
-                height: 0.26rem;
-                border-radius: 13px;
-                text-align: center;
-                float: right;
-                color: white;
-                background-color: #FF595F;
+            p {
+                margin-top: 0.33rem;
+                line-height: 0.26rem;
+                font-size: 15px;
+                color: #777777;
+                span {
+                    margin-right: 5px;
+                }
+                em {
+                    width: 55px;
+                    font-size: 12px;
+                    height: 0.26rem;
+                    border-radius: 13px;
+                    text-align: center;
+                    float: right;
+                    color: white;
+                    background-color: #FF595F;
+                }
             }
         }
     }
