@@ -11,12 +11,12 @@ class MovieDesc extends Component {
     
     render () {
         const imgsrc = this.props.data.images.small
-        const num = this.props.data.stars
+        const num = this.props.data.rating.stars
         const rating = this.props.data.rating.average
         const directors = this.props.data.directors[0]
         const {casts,title} = this.props.data 
         return (
-            <div className = "movie-desc">
+            <div className = "movie-desc clearfix">
                 <div className="moviedesc-left">
                     <MovieImg imgsrc = {imgsrc}></MovieImg> 
                 </div>

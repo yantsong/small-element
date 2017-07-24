@@ -1,0 +1,51 @@
+.detail-page {
+    position: relative;
+    padding: 10px 10px 0 10px;
+    height: 100%;
+    h1 {
+        font-size: 18px;
+        line-height: 36px;
+        color: #28AEAC;
+    }
+    p {
+        font-size: 13px;
+        line-height: 26px;
+        color: #2F2E2E;
+    }
+    h3 {
+        height: 14px;
+        line-height: 14px;
+        font-size: 14px;
+        color: #28AEAC;
+        border-left: 2px solid #28AEAC;
+        padding-left: 6px;
+        margin-bottom: 11px;
+    }
+    .spin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .desc-footer {
+        position: fixed;
+        bottom: 0;
+        height: 48px;
+        line-height: 48px;
+        width: 100%;
+        .more-movie {
+            width: 35%;
+            color: #C0C2C5;
+            background-color: white;
+            box-shadow: inset 0px 1px 1px -1px #c8c7cc;
+            margin-left: -10px;
+        }
+        a {
+            text-align: center;
+            width: 64%;
+            color: white;
+            background-color: #FF595F;
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.moviedesc-left {
+    width: 25%;
+    float: left;
+}
+
+.moviedesc-right {
+    width: 70%;
+    float: right;
+    dt {
+        color: #858585;
+        line-height: 0.3rem;
+        font-size: 16px;
+        span {
+            color: #28AEAC;
+            font-size: 12px;
+            line-height: 0.3rem;
+            float: right;
+            i {
+                font-size: 16px;
+                font-style: normal;
+            }
+        }
+    }
+    dd {
+        color: #939393;
+        margin-bottom: 5px;
+    }
+    ul {
+        color: #939393;
+        line-height: 0.24rem;
+        font-size: 12px;
+    }
+}

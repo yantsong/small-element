@@ -5,6 +5,8 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux'
 import {addNowMovie} from '../../redux/actions/action.js'
 import {getDeatilById} from '../../fetch/home/home.js'
+import { Spin } from 'antd';
+
 
 
 class Detail extends React.Component {
@@ -37,19 +39,19 @@ class Detail extends React.Component {
         const {title,summary} = this.props.nowInfo
         console.log(title,this.props.nowInfo);
         return (
-            <div>
+            <div className = "detail-page">
             {
               this.state.dataLoading?
               <div>
                <h1>{title}</h1>
                 <h3>影片简介</h3>
-                <p className = "desc-title">{summary}</p>
                 <MovieDesc data = {this.props.nowInfo}></MovieDesc>
+                <p className = "desc-title">{summary}</p>
                 <div className="desc-footer">
-                    <a href="#">更多电影</a>
+                    <a href="#" className = "more-movie">更多电影</a>
                     <a href="#">发起点映</a>
                 </div>
-              </div> : ''
+              </div> :  <Spin size="small" className="spin"></Spin>
             }
             </div>
         )

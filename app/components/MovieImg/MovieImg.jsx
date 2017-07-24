@@ -5,7 +5,7 @@ class MovieImg extends Component {
     render() {
         return (
             <div className="movie-img">
-                   <p>超前点映</p>
+                   <p className = "img-line">超前点映</p>
                     <a href="#" className = "iconfont icon-bofang-copy"></a>
                     <img src={this.props.imgsrc} alt=""/>          
             </div>
