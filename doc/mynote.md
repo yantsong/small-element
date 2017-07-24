@@ -195,3 +195,6 @@ main {
   在target中可以通过this.props.parma.参数来取得
   ```
 #### redux深入占位,流程,注意事项。以及redux-devtools的使用
+
+####判断对象是否为空
+对对象进行序列化 JSON.stringify(c) == "{}" 变成字符串，或者判断这个对象中的属性是否存在

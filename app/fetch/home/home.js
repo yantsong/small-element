@@ -7,3 +7,6 @@ export function getHomeData() {
 export function getDouBanApi() {
     return getjsonp('https://api.douban.com/v2/movie/in_theaters')
 }
+export function getDeatilById(id) {
+    return getjsonp(`https://api.douban.com/v2/movie/subject/${id}`)
+}

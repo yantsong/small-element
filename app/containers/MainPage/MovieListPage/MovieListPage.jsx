@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 import MovieImg from '../../../components/MovieImg/MovieImg'
 import './MovieListPage.scss'
 class MovieListPage extends Component {
-//     static contextTypes = {
-//     router: React.PropTypes.object
-//   }
+
     constructor (props, context) {
         super(props, context)
         this.state = {

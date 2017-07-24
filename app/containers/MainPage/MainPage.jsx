@@ -27,6 +27,14 @@ class MainPage extends Component {
     }
 
     componentDidMount(){
+        if (this.props.Moviedata.length>0) 
+            {
+                 this.setState({
+                dataLoading:false
+            })
+            return
+            }
+                
       getDouBanApi().then(
           (res)=>{
            return res.json()
@@ -100,8 +108,9 @@ class MainPage extends Component {
         }
     }
 }
-const mapStateToProps = () => {
+const mapStateToProps = (state) => {
     return {
+        Moviedata:state.getMoreData
     }
 }
 const containerName = connect(
