@@ -59,7 +59,6 @@ module.exports = {
             hash: true,
             chunks: ['commons', 'index']
         }),
-        new OpenBrowserPlugin({ url: 'http://192.168.10.222:8088' })
     ],
     devServer: {
         proxy: {
