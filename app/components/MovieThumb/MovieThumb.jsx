@@ -29,8 +29,8 @@ class MovieThumb extends Component {
                 </div>
                 <dl>
                     <dt>《{title}》超前点映中</dt>  
-                    <dd><i className = "glyphicon glyphicon-time"></i>{month}月{day}日 &nbsp;星期{week}&nbsp;{hour}:{min}</dd>
-                    <dd> <i className="glyphicon glyphicon-map-marker"></i>北京市昌平区回龙观小区</dd>
+                    <dd><i className = "iconfont icon-shijian"></i>{month}月{day}日 &nbsp;星期{week}&nbsp;{hour}:{min}</dd>
+                    <dd> <i className="iconfonticon-weizhi"></i>北京市昌平区回龙观小区</dd>
                 </dl>
                 {
                     num<100? <div className="nocompelet">

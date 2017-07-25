@@ -8,7 +8,7 @@ class Header extends Component {
                 <div className="home-header-left pull-left">
                     <span>{this.props.cityName}</span>
                     &nbsp;
-                    <i className="glyphicon glyphicon-menu-down" ></i>
+                    <i className="icon-xia-copy iconfont" ></i>
                 </div>
                 <div className="home-header-right pull-right">
                     <span className="active">全部</span>

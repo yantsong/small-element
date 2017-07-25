@@ -29,7 +29,7 @@ class MovieListPage extends Component {
             <div className="movie-list-page">
                 <div className="search">
                     <input type="text" placeholder = "输入片名\导演\演员..." onChange = {this.inputFilter.bind(this)} ref={(input) =>{this.input=input}}/>
-                    <i>o</i>
+                    <i className="icon-sousuo iconfont"></i>
                 </div>
                 <div className="tag-list">
                     <ul className = "clearfix">

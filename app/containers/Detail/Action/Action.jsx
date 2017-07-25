@@ -45,7 +45,7 @@ class Action extends Component {
                             max={20}
                             style={{ marginLeft: 16 }}
                             value={this.state.inputValue}
-                            onChange={this.onChange}
+                            onChange={this.onChange.bind(this)}
                         />
                     </Col>
                  </Row>
@@ -53,7 +53,7 @@ class Action extends Component {
                 showTime
                 format="YYYY-MM-DD HH:mm:ss"
                 placeholder="Select Time"
-                onChange={this.onChange1}
+                onChange={this.onChange1.bind(this)}
                 onOk={this.onOk}
                 />
             </div>

@@ -4,3 +4,34 @@
     font-size: 14px;
     line-height: 0.3rem;
 }
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_dodn9xqjbblz0k9.eot?t=1500974832458');
+    /* IE9*/
+    src: url('//at.alicdn.com/t/font_dodn9xqjbblz0k9.eot?t=1500974832458#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_dodn9xqjbblz0k9.woff?t=1500974832458') format('woff'), /* chrome, firefox */
+    url('//at.alicdn.com/t/font_dodn9xqjbblz0k9.ttf?t=1500974832458') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_dodn9xqjbblz0k9.svg?t=1500974832458#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weizhi:before {
+    content: "\e65c";
+}
+
+.icon-xia-copy:before {
+    content: "\e604";
+}
+
+.icon-shijian:before {
+    content: "\e66d";
+}
