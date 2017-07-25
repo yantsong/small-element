@@ -11,6 +11,7 @@ import LoadMore from '../../components/loadMore/loadMore'
 import { connect } from 'react-redux'
 import {getCourse} from '../../redux/actions/action.js'
 import {getDouBanApi} from '../../fetch/home/home.js'
+
 import './home.scss'
 
 class Home extends React.Component {
@@ -33,6 +34,11 @@ resultHandle(result){
        }) 
    })
 }
+
+    clickHandle(id){
+        const path = `detail/${id}`
+        this.context.router.push(path)
+    }
     getData(){
             this.setState({
                 isLoading:true
@@ -72,8 +78,11 @@ resultHandle(result){
               
                     <div>
                  <Carousel></Carousel>
-               <div className="container"><WillShow MovieNow={movieList}></WillShow></div> 
+               <div className="container">
+               <WillShow MovieNow={movieList}></WillShow></div> 
+               <div onClick = {this.clickHandle.bind(this,movieList[0].id)}>
                 <MovieThumb MovieAction = {movieList[0]}></MovieThumb>
+               </div>
                 <div>
                      <div className="hot">
                         — 全国热门点映 —
@@ -81,7 +90,9 @@ resultHandle(result){
                 {  
                     this.props.movieList.map(
                         (item,index) =>{
-                            return <MovieThumb key={index} MovieAction={item}></MovieThumb>
+                            return <div key={index} onClick = {this.clickHandle.bind(this,item.id)}>
+                            <MovieThumb  MovieAction={item} ></MovieThumb>
+                            </div> 
                         }
                     )
                 }
@@ -92,7 +103,15 @@ resultHandle(result){
         )
     }
 }
+
+Home.contextTypes = {
+    router: React.PropTypes.object
+  }
+
+
 //redux-react
+
+
 
 function mapStateToProps(state) {
     return {

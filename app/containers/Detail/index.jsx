@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import {addNowMovie} from '../../redux/actions/action.js'
 import {getDeatilById} from '../../fetch/home/home.js'
 import { Spin } from 'antd';
+import {Link} from 'react-router'
 
 
 
@@ -48,8 +49,9 @@ class Detail extends React.Component {
                 <MovieDesc data = {this.props.nowInfo}></MovieDesc>
                 <p className = "desc-title">{summary}</p>
                 <div className="desc-footer">
-                    <a href="#" className = "more-movie">更多电影</a>
-                    <a href="#">发起点映</a>
+                    <Link to = '/mainpage/movielistpage'  className = "more-movie">更多电影</Link>
+                    <Link to = '/action'>发起点映</Link>
+                   
                 </div>
               </div> :  <Spin size="small" className="spin"></Spin>
             }

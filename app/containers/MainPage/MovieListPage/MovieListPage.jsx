@@ -11,7 +11,6 @@ class MovieListPage extends Component {
             filterlist:this.props.movielist,
             genres:[],
             index:0,
-        
             }
     }
     componentWillMount(){
@@ -171,7 +170,6 @@ class MovieListPage extends Component {
      }       
     routeJump(id){
         const path = `detail/${id}`
-        console.log(this.context);
         this.context.router.push(path)
     }
 }
