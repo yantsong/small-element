@@ -130,18 +130,14 @@ class MovieListPage extends Component {
                 filterlist:filterarr,
                 movielist:filterarr
                 })
-            console.log(this.state.movielist);
             }
         //输入搜索
     inputFilter(){
         let value,filterarr,resultArr = [];
         value = this.input.value.toString();
-        console.log(111,value);
         filterarr = this.state.filterlist
-        console.log(filterarr);
         filterarr.forEach(
             (item,index) =>{
-               console.log('object');
             let strArr = [item.title];
                 item.casts.forEach(
                     (item) =>{
@@ -149,8 +145,7 @@ class MovieListPage extends Component {
                     }
                 )
                 strArr.push(item.directors[0].name)
-                console.log(strArr.toString().indexOf('刀'),'1cixunhuan');
-                if (strArr.toString().indexOf(value) != -1) { console.log(strArr);resultArr.push(item)}
+                if (strArr.toString().indexOf(value) != -1) {resultArr.push(item)}
             }
         )
         this.setState((prevstate) =>{
