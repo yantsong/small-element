@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev1": "webpack-dev-server --inline --port 8089 --host 172.20.10.2",
-    "dev": "webpack-dev-server --inline --port 8089 --host 192.168.123.181"
+    "dev": "webpack-dev-server --inline --port 8089 --host 192.168.123.111"
   },
   "author": "song",
   "license": "MIT",
@@ -49,6 +49,7 @@
     "es6-promise": "^4.1.1",
     "fetch-jsonp": "^1.1.1",
     "react": "^15.6.1",
+    "react-mobile-datepicker": "^3.0.6",
     "react-redux": "^5.0.5",
     "react-router": "^2.7.0",
     "react-swipe": "^5.0.8",
