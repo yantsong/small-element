@@ -6,10 +6,45 @@
     }
     h3 {
         height: 14px;
-        line-height: 50px;
         font-size: 14px;
+        margin: 18px 0;
         color: #28AEAC;
         border-left: 2px solid #28AEAC;
         padding-left: 6px;
+    }
+    .ant-slider {
+        float: left;
+        width: 70%;
+    }
+    .ant-input-number {
+        float: left;
+        width: 18%;
+    }
+    .action-content {
+        padding: 0 10px;
+    }
+    .ant-calendar-picker {
+        width: 100%;
+        float: left;
+    }
+    .ant-calendar {
+        width: 100%;
+    }
+    .ant-calendar-picker-container {
+        width: 100%;
+    }
+    .message-tip {
+        color: #C4C4C4;
+        line-height: 14px;
+        font-size: 12px;
+        margin-bottom: 5px;
+        float: right;
+        width: 50%;
+    }
+    ul {
+        background-color: #F1F1F1;
+        li {
+            background-color: #FFFFFF;
+        }
     }
 }

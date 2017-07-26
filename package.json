@@ -37,12 +37,14 @@
     "remote-redux-devtools": "^0.5.12",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.18.2",
+    "svg-sprite-loader": "^0.3.1",
     "url-loader": "^0.5.9",
     "webpack": "^1.15.0",
     "webpack-dev-server": "^1.16.5"
   },
   "dependencies": {
     "antd": "^2.12.0",
+    "antd-mobile": "^1.5.0",
     "babel-plugin-import": "^1.2.1",
     "es6-promise": "^4.1.1",
     "fetch-jsonp": "^1.1.1",

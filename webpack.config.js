@@ -2,7 +2,9 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin')
-
+const svgDirs = [
+    require.resolve('antd-mobile').replace(/warn\.js$/, ''), // 1. 属于 antd-mobile 内置 svg 文件
+];
 
 module.exports = {
     entry: {
@@ -35,7 +37,12 @@ module.exports = {
             },
             //提供html内嵌的imgurl支持
             { test: /\.html$/, loader: 'html-withimg-loader' },
-            { test: /\.(png|gif|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=8192&name=/resource/[name].[ext]' }
+            { test: /\.(png|gif|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=8192&name=/resource/[name].[ext]' },
+            {
+                test: /\.(svg)$/i,
+                loader: 'svg-sprite',
+                include: svgDirs, // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
+            }
         ]
     },
     externals: {

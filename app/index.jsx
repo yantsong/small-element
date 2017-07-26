@@ -9,6 +9,9 @@ import configureStore from './redux/store/Store.js'
 import RouteMap from './router/routerMap.jsx'
 import './reset.scss'
 import './styles.scss'
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
 
 const store = configureStore();
             store.subscribe(
