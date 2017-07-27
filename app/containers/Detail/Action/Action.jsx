@@ -11,10 +11,13 @@ class Action extends Component {
         this.state = {
             inputValue: 40,
             title:'这是活动标题，你可以修改他',
-            desc:'这是活动简介，你可以修改他。\\br 明天启七年，北镇抚司锦衣卫沈炼（张震 饰）在一次扫除乱党任务中，为救画师北斋（杨幂 饰），将同僚凌云铠（武强 饰）灭口。裹挟在乱世，沈炼与北斋情陷其中，却越陷越深。而在这一切的背后，巨大阴谋正暗中布局。众生如蝼蚁囿于修罗场，逆鳞之战，一触即发……',
+            desc:'这是活动简介，你可以修改他。 明天启七年，北镇抚司锦衣卫沈炼（张震 饰）在一次扫除乱党任务中，为救画师北斋（杨幂 饰），将同僚凌云铠（武强 饰）灭口。裹挟在乱世，沈炼与北斋情陷其中，却越陷越深。而在这一切的背后，巨大阴谋正暗中布局。众生如蝼蚁囿于修罗场，逆鳞之战，一触即发……',
             ifyouare:'这里也可以修改',
             time: new Date(),
-		    isOpen: false,
+            isOpen: false,
+            show:false,
+            text:'测试测试测试',
+            active:''
         }
     }
 
@@ -37,14 +40,45 @@ class Action extends Component {
 	}
 
 
- onChange1(value, dateString) {
-  console.log('Selected Time: ', value);
-  console.log('Formatted Selected Time: ', dateString);
-}
-
- onOk(value) {
-  console.log('onOk: ', value);
-}
+ editor(item){
+     console.log(item);
+     this.setState({
+         show:true,
+         active:item
+     })
+ }
+    changeHtml(){
+        let value = this.state.active.toString();
+        console.log(value);
+        switch (value) {
+            case 'title':
+                 this.setState({
+                    title : this.text.value
+                })
+                break;
+            case 'desc':
+                 this.setState({
+                    desc : this.text.value
+                })
+                break;
+            case 'ifyouare':
+                 this.setState({
+                    ifyouare : this.text.value
+                })
+                break;
+            default:
+               break;
+        }
+        this.setState({
+           show:false
+        })
+    }
+    cancel(){
+        this.setState({
+            show:false
+        }
+        )
+    }
 
 
     render () {
@@ -92,22 +126,39 @@ class Action extends Component {
                             />
                         
                         </div>
-                        // <ul>
-                        //     <li>
-                        //         <h5>活动标语 <span> <i></i> 个性编辑</span> </h5>
-                        //         <p>{this.state.title}</p>
-                        //     </li>
+                        <ul className = "action-list">
+                            <li>
+                                <h5>活动标语 <span onClick = {this.editor.bind(this,'title')}> <i></i> 个性编辑</span> </h5>
+                                <p>{this.state.title}</p>
+                            </li>
 
-                        //     <li>
-                        //         <h5>活动简介 <span> <i></i> 个性编辑</span> </h5>
-                        //         <p>{this.state.desc}</p>
-                        //     </li>
+                            <li>
+                                <h5>活动简介 <span onClick = {this.editor.bind(this,'desc')}> <i></i> 个性编辑</span> </h5>
+                                <p>{this.state.desc}</p>
+                            </li>
 
-                        //     <li>
-                        //       <h5>如果你是 <span> <i></i> 个性编辑</span> </h5>
-                        //         <p>{this.state.ifyouare}</p>
-                        //     </li>
-                        // </ul>
+                            <li>
+                              <h5>如果你是 <span onClick = {this.editor.bind(this,'ifyouare')}> <i></i> 个性编辑</span> </h5>
+                                <p>{this.state.ifyouare}</p>
+                            </li>
+
+                            <li>
+                                <h5>联系方式</h5>
+                                <input type="text" placeholder = "请输入姓名(必填)"/>
+                                <input type="text" placeholder = "请输入手机(必填)"/>
+                            </li>
+                        </ul>
+                        <div className="action-footer">
+                            <em>票价 <i>￥40起</i>  </em><a>确认提交</a>
+                        </div>
+                        <div className="editor" style = {this.state.show?{left:0}:{left:'100%'}}>
+                            <textarea   ref = {(text) =>{this.text = text}} defaultValue = {this.state.text}>
+                            </textarea>
+                            <div className="editor-footer">
+                                <a onClick = {this.cancel.bind(this)}>取消</a>
+                                <a onClick = {this.changeHtml.bind(this)}>确定</a>
+                            </div>
+                        </div>
                        
                     </div>                
             </div>
