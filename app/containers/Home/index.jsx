@@ -20,7 +20,8 @@ class Home extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
          this.state={
             movieList:[],
-            isLoading:false
+            isLoading:false,
+            active:0
         }
 }
 resultHandle(result){
@@ -45,6 +46,13 @@ resultHandle(result){
             })
         let result = getDouBanApi();
         this.resultHandle(result);
+    }
+    changeActive(index){
+        this.setState(
+            {
+                active:index
+            }
+        )
     }
         componentDidMount(){
             //获取数据
@@ -72,6 +80,8 @@ resultHandle(result){
         }
      render() {
          const {movieList} = this.props
+         const num = this.state.active
+         console.log(num);
         return (
             <div className="main">
                     <Header cityName = '上海'></Header>
@@ -79,9 +89,9 @@ resultHandle(result){
                     <div>
                  <Carousel></Carousel>
                <div className="container">
-               <WillShow MovieNow={movieList}></WillShow></div> 
-               <div onClick = {this.clickHandle.bind(this,movieList[0].id)}>
-                <MovieThumb MovieAction = {movieList[0]}></MovieThumb>
+               <WillShow MovieNow={movieList} changeActive = {this.changeActive.bind(this)}></WillShow></div> 
+               <div onClick = {this.clickHandle.bind(this,movieList[num].id)}>
+                <MovieThumb MovieAction = {movieList[num]}></MovieThumb>
                </div>
                 <div>
                      <div className="hot">

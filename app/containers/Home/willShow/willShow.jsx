@@ -10,6 +10,12 @@ class WillShow extends Component {
             index:0
         }
     }
+    clickHandle(index){
+         this.setState({
+                        index:index+1
+                    })
+        this.props.changeActive(index+1)
+    }
     render() {
         const wt = 67;
         const mg = 5;
@@ -23,9 +29,9 @@ class WillShow extends Component {
                         <img src="../../../../assets/images/s1.jpg" alt=""/>
                     </li>
                      {this.props.MovieNow.map( (item,index) => {
-                    return   <li key={index} className={this.state.index === index+1?'active':''} onClick={()=> this.setState({
-                        index:index+1
-                    })}>
+                    return   <li key={index} className={this.state.index === index+1?'active':''} onClick={
+                       this.clickHandle.bind(this,index)
+                }>
                     <img src={item.images.small} alt=""/>
                     </li>
                 })}

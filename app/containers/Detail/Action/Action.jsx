@@ -17,7 +17,10 @@ class Action extends Component {
             isOpen: false,
             show:false,
             text:'测试测试测试',
-            active:''
+            active:'',
+            heighLight:false,
+            name:'',
+            phone:''
         }
     }
 
@@ -41,7 +44,6 @@ class Action extends Component {
 
 
  editor(item){
-     console.log(item);
      this.setState({
          show:true,
          active:item
@@ -79,6 +81,13 @@ class Action extends Component {
         }
         )
     }
+    inputchange(){
+        this.setState({
+            name:this.name.value,
+            phone:this.phone.value
+        })
+    }
+
 
 
     render () {
@@ -114,7 +123,8 @@ class Action extends Component {
                             <a
 					className="select-btn"
 					onClick={this.handleClick.bind(this)}>
-					{moment(this.state.time).format('LLL').toString()}
+                    {moment(this.state.time).format('LLL').toString()}
+                    <i></i>
 				</a>
                           <DatePicker
                             value={this.state.time}
@@ -144,12 +154,12 @@ class Action extends Component {
 
                             <li>
                                 <h5>联系方式</h5>
-                                <input type="text" placeholder = "请输入姓名(必填)"/>
-                                <input type="text" placeholder = "请输入手机(必填)"/>
+                                <input type="text" placeholder = "请输入姓名(必填)" onChange={this.inputchange.bind(this)}  ref = {(input) =>{this.name = input}}/>
+                                <input type="text" placeholder = "请输入手机(必填)" onChange={this.inputchange.bind(this)}  ref = {(input) =>{this.phone = input}}/>
                             </li>
                         </ul>
                         <div className="action-footer">
-                            <em>票价 <i>￥40起</i>  </em><a>确认提交</a>
+                            <em>票价 <i>￥40起</i>  </em><a className = {this.state.heighLight?'active':''}>确认提交</a>
                         </div>
                         <div className="editor" style = {this.state.show?{left:0}:{left:'100%'}}>
                             <textarea   ref = {(text) =>{this.text = text}} defaultValue = {this.state.text}>
@@ -159,9 +169,15 @@ class Action extends Component {
                                 <a onClick = {this.changeHtml.bind(this)}>确定</a>
                             </div>
                         </div>
-                       
                     </div>                
             </div>
+        )
+    }
+    componentDidMount() {
+        this.setState(
+            {
+            heighLight: this.state.name&this.state.phone
+            }
         )
     }
 }
