@@ -25476,25 +25476,25 @@ webpackJsonp([0,1],[
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'carousel-item' },
-	                        _react2.default.createElement('img', { src: 'assets/images/b1.jpg', alt: '' }),
+	                        _react2.default.createElement('img', { src: 'http://ou2puub88.bkt.clouddn.com/b1.jpg', alt: '' }),
 	                        ' '
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'carousel-item' },
-	                        _react2.default.createElement('img', { src: 'assets/images/b2.jpg', alt: '' }),
+	                        _react2.default.createElement('img', { src: 'http://ou2puub88.bkt.clouddn.com/b2.jpg', alt: '' }),
 	                        ' '
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'carousel-item' },
-	                        _react2.default.createElement('img', { src: 'assets/images/b3.jpg', alt: '' }),
+	                        _react2.default.createElement('img', { src: 'http://ou2puub88.bkt.clouddn.com/b3.jpg', alt: '' }),
 	                        ' '
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'carousel-item' },
-	                        _react2.default.createElement('img', { src: 'assets/images/b4.jpg', alt: '' }),
+	                        _react2.default.createElement('img', { src: 'http://ou2puub88.bkt.clouddn.com/b4.jpg', alt: '' }),
 	                        ' '
 	                    )
 	                ),
@@ -26441,7 +26441,7 @@ webpackJsonp([0,1],[
 	                            null,
 	                            '\u5168\u90E8\u70B9\u6620'
 	                        ),
-	                        _react2.default.createElement('img', { src: 'assets/images/s1.jpg', alt: '' })
+	                        _react2.default.createElement('img', { src: 'http://ou2puub88.bkt.clouddn.com/s1.jpg', alt: '' })
 	                    ),
 	                    this.props.MovieNow.map(function (item, index) {
 	                        return _react2.default.createElement(
@@ -27306,7 +27306,7 @@ webpackJsonp([0,1],[
 
 
 	// module
-	exports.push([module.id, ".movie-list-page .search {\n  padding: 8px;\n  width: 100%;\n  background-color: #F7F7F7;\n  position: fixed;\n  top: 0;\n  z-index: 9;\n  color: #909095; }\n  .movie-list-page .search input {\n    width: 100%;\n    height: 30px;\n    border-radius: 15px 15px;\n    border: none;\n    text-indent: 30px;\n    line-height: 30px;\n    font-size: 15px; }\n  .movie-list-page .search i {\n    font-size: 15px;\n    line-height: 0.3rem;\n    display: inline-block;\n    position: absolute;\n    left: 20px; }\n\n.movie-list-page .tag-list {\n  background-color: #F1F1F1;\n  padding: 0 10px;\n  margin-top: 46px; }\n  .movie-list-page .tag-list ul {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  .movie-list-page .tag-list li {\n    font-size: 13px;\n    line-height: 22px;\n    height: 22px;\n    width: 13%;\n    margin: 0.05rem 0.05rem;\n    text-align: center;\n    border-radius: 10%;\n    overflow: hidden;\n    border: 1px solid #65C2C1;\n    background-color: transparent;\n    color: #65C2C1; }\n  .movie-list-page .tag-list li.active {\n    background-color: #28AEAC;\n    border-color: #28AEAC;\n    color: white; }\n\n.movie-list-page .movie-list {\n  padding: 0 10px; }\n  .movie-list-page .movie-list li {\n    height: 1.24rem;\n    padding: 10px;\n    box-shadow: inset 0px -1px 1px -1px #c8c7cc; }\n  .movie-list-page .movie-list .list-left {\n    width: 25%;\n    float: left; }\n  .movie-list-page .movie-list .list-right {\n    width: 75%;\n    float: right;\n    padding-left: 10px; }\n    .movie-list-page .movie-list .list-right h2 {\n      line-height: 0.28rem;\n      font-size: 15px;\n      display: inline-block; }\n    .movie-list-page .movie-list .list-right p {\n      margin-top: 0.33rem;\n      line-height: 0.26rem;\n      font-size: 15px;\n      color: #777777; }\n      .movie-list-page .movie-list .list-right p span {\n        margin-right: 5px; }\n      .movie-list-page .movie-list .list-right p em {\n        width: 70px;\n        font-size: 12px;\n        height: 0.26rem;\n        border-radius: 20px;\n        text-align: center;\n        float: right;\n        color: white;\n        background-color: #FF595F; }\n\n.movie-list-page dt span {\n  float: right;\n  line-height: 0.28rem;\n  color: #28AEAC;\n  font-size: 12px; }\n  .movie-list-page dt span em {\n    font-style: normal;\n    font-weight: 600;\n    font-size: 16px; }\n\n.movie-list-page dd {\n  font-size: 15px;\n  color: #777777;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n  .movie-list-page dd span {\n    margin-right: 5px; }\n\n@font-face {\n  font-family: \"iconfont\";\n  src: url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.eot?t=1500974592850\");\n  /* IE9*/\n  src: url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.eot?t=1500974592850#iefix\") format(\"embedded-opentype\"), url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.woff?t=1500974592850\") format(\"woff\"), url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.ttf?t=1500974592850\") format(\"truetype\"), url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.svg?t=1500974592850#iconfont\") format(\"svg\");\n  /* iOS 4.1- */ }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-sousuo:before {\n  content: \"\\E6AF\"; }\n", ""]);
+	exports.push([module.id, ".movie-list-page .search {\n  padding: 8px;\n  width: 100%;\n  background-color: #F7F7F7;\n  position: fixed;\n  top: 0;\n  z-index: 9;\n  color: #909095; }\n  .movie-list-page .search input {\n    width: 100%;\n    height: 30px;\n    border-radius: 15px 15px;\n    border: none;\n    text-indent: 30px;\n    line-height: 30px;\n    font-size: 15px; }\n  .movie-list-page .search i {\n    font-size: 15px;\n    line-height: 30px;\n    display: inline-block;\n    position: absolute;\n    left: 20px; }\n\n.movie-list-page .tag-list {\n  background-color: #F1F1F1;\n  padding: 0 10px;\n  margin-top: 46px; }\n  .movie-list-page .tag-list ul {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  .movie-list-page .tag-list li {\n    font-size: 13px;\n    line-height: 22px;\n    height: 22px;\n    width: 13%;\n    margin: 0.05rem 0.05rem;\n    text-align: center;\n    border-radius: 10%;\n    overflow: hidden;\n    border: 1px solid #65C2C1;\n    background-color: transparent;\n    color: #65C2C1; }\n  .movie-list-page .tag-list li.active {\n    background-color: #28AEAC;\n    border-color: #28AEAC;\n    color: white; }\n\n.movie-list-page .movie-list {\n  padding: 0 10px; }\n  .movie-list-page .movie-list li {\n    height: 1.24rem;\n    padding: 10px;\n    box-shadow: inset 0px -1px 1px -1px #c8c7cc; }\n  .movie-list-page .movie-list .list-left {\n    width: 25%;\n    float: left; }\n  .movie-list-page .movie-list .list-right {\n    width: 75%;\n    float: right;\n    padding-left: 10px; }\n    .movie-list-page .movie-list .list-right h2 {\n      line-height: 0.28rem;\n      font-size: 15px;\n      display: inline-block; }\n    .movie-list-page .movie-list .list-right p {\n      margin-top: 0.33rem;\n      line-height: 0.26rem;\n      font-size: 15px;\n      color: #777777; }\n      .movie-list-page .movie-list .list-right p span {\n        margin-right: 5px; }\n      .movie-list-page .movie-list .list-right p em {\n        width: 70px;\n        font-size: 12px;\n        height: 0.26rem;\n        border-radius: 20px;\n        text-align: center;\n        float: right;\n        color: white;\n        background-color: #FF595F; }\n\n.movie-list-page dt span {\n  float: right;\n  line-height: 0.28rem;\n  color: #28AEAC;\n  font-size: 12px; }\n  .movie-list-page dt span em {\n    font-style: normal;\n    font-weight: 600;\n    font-size: 16px; }\n\n.movie-list-page dd {\n  font-size: 15px;\n  color: #777777;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n  .movie-list-page dd span {\n    margin-right: 5px; }\n\n@font-face {\n  font-family: \"iconfont\";\n  src: url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.eot?t=1500974592850\");\n  /* IE9*/\n  src: url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.eot?t=1500974592850#iefix\") format(\"embedded-opentype\"), url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.woff?t=1500974592850\") format(\"woff\"), url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.ttf?t=1500974592850\") format(\"truetype\"), url(\"//at.alicdn.com/t/font_xv5rwa15obbg9zfr.svg?t=1500974592850#iconfont\") format(\"svg\");\n  /* iOS 4.1- */ }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-sousuo:before {\n  content: \"\\E6AF\"; }\n", ""]);
 
 	// exports
 
@@ -32961,7 +32961,7 @@ webpackJsonp([0,1],[
 	                            _react2.default.createElement(
 	                                'h5',
 	                                null,
-	                                '\u5982\u679C\u4F60\u662F ',
+	                                '\u52A0\u6211\u5FAE\u4FE1 ',
 	                                _react2.default.createElement(
 	                                    'span',
 	                                    { onClick: this.editor.bind(this, 'wechat') },
