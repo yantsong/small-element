@@ -179,11 +179,12 @@ main {
 
   ```
   class ComponentName extends Componnet{.....}//类继承,定义了一大堆 
+
   ComponentName.contextTypes = {
     router: React.PropTypes.object
   }
   ```
-  2. 现在可以使用router了,将this.context.router(要跳转的路径)写到某一个回调函数中即可
+  2. 现在可以使用router了,将this.context.router.push(要跳转的路径)写到某一个回调函数中即可
   3. 还可以通过
   ```
   import { browserHistory } from 'react-router'

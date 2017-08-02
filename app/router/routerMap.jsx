@@ -9,6 +9,7 @@ import MainPage from '../containers/MainPage/MainPage'
 import Detail from '../containers/Detail';
 import NotFound from '../containers/404';
 import Action from '../containers/Detail/Action/Action'
+import MyMovieList from '../components/MyMovieList/MyMovieList'
 
 
 class RouteMap extends React.Component {
@@ -24,6 +25,7 @@ class RouteMap extends React.Component {
                             <Route path='/mainpage/movielistpage' component={MovieListPage}/>
                      </Route> 
                     <Route path='/detail/:id' component={Detail}/>
+                    <Route path='/mymovielist' component={MyMovieList}/>
                     <Route path='/action' component={Action}/>
                     <Route path='*' component={NotFound}/>
                 </Route>

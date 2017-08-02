@@ -15,6 +15,15 @@
         padding: 0;
     }
     .nocompelet {
+        position: relative;
+        em {
+            font-style: normal;
+            font-size: 20px;
+            position: absolute;
+            right: 5%;
+            bottom: 0;
+            color: red;
+        }
         span {
             font-size: 15px;
             line-height: 0.3rem;
@@ -32,6 +41,14 @@
         }
     }
     .compeleted {
+        position: relative;
+        i {
+            position: absolute;
+            right: 0;
+            top: -0.15rem;
+            font-size: 0.3rem;
+            color: red;
+        }
         span {
             font-size: 15px;
             line-height: 0.3rem;
@@ -99,4 +116,31 @@
             color: gray
         }
     }
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_7x54gutniet81tt9.eot?t=1501658100664');
+    /* IE9*/
+    src: url('//at.alicdn.com/t/font_7x54gutniet81tt9.eot?t=1501658100664#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_7x54gutniet81tt9.woff?t=1501658100664') format('woff'), /* chrome, firefox */
+    url('//at.alicdn.com/t/font_7x54gutniet81tt9.ttf?t=1501658100664') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_7x54gutniet81tt9.svg?t=1501658100664#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chenggong:before {
+    content: "\e66a";
+}
+
+.icon-hot:before {
+    content: "\e609";
 }

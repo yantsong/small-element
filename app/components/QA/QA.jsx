@@ -4,7 +4,7 @@ class QA extends Component {
     render () {
         return (
             <div className="qa">
-                <i>?</i> 常见问题解答
+                <i className = "iconfont icon-wenhao"></i> 常见问题解答
             </div>
         )
     }

@@ -30,19 +30,22 @@ class MovieThumb extends Component {
                 <dl>
                     <dt>《{title}》超前点映中</dt>  
                     <dd><i className = "iconfont icon-shijian"></i>{month}月{day}日 &nbsp;星期{week}&nbsp;{hour}:{min}</dd>
-                    <dd> <i className="iconfonticon-weizhi"></i>北京市昌平区回龙观小区</dd>
+                    <dd> <i className="iconfont icon-weizhi"></i>北京市昌平区回龙观小区</dd>
                 </dl>
                 {
                     num<100? <div className="nocompelet">
-                    <div className="progress">
-                        <div className="progress-bar progress-bar-striped active" role="progressbar" 
-                        aria-valuenow={num} aria-valuemin="0" aria-valuemax="100" style={{'width':num+'%'}}>
-                        </div>
-                    </div>
-                    <div className="count">
-                        <span><strong>{num}</strong> 人已报名</span> <i>目标100人</i>
-                    </div>
-                </div>: <div className="compeleted">
+                            <em className="iconfont icon-hot"></em>
+                            <div className="progress">
+                                <div className="progress-bar progress-bar-striped active" role="progressbar" 
+                                aria-valuenow={num} aria-valuemin="0" aria-valuemax="100" style={{'width':num+'%'}}>
+                                </div>
+                            </div>
+                            <div className="count">
+                                <span><strong>{num}</strong> 人已报名</span> <i>目标100人</i>
+                            </div>
+                </div>:
+                 <div className="compeleted">
+                    <i className="iconfont icon-chenggong"></i>
                     <span>活动即将开始</span> <em>售罄</em>
                 </div>
                 }
