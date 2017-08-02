@@ -32,22 +32,56 @@
     .desc-footer {
         position: fixed;
         bottom: 0;
-        height: 48px;
-        line-height: 48px;
+        height: 50px;
         width: 100%;
         .more-movie {
+            font-family: "Microsoft YaHei", "weiruanyahei";
             width: 36%;
-            color: #C0C2C5;
+            color: #8A8D93;
             background-color: white;
             box-shadow: inset 0px 1px 1px -1px #c8c7cc;
             margin-left: -10px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 12px;
+            i {
+                font-size: 26px;
+                line-height: 38px;
+            }
         }
         a {
+            line-height: 50px;
+            height: 50px;
             text-align: center;
             width: 64%;
             color: white;
             background-color: #FF595F;
             display: inline-block;
+            vertical-align: top;
+            font-size: 18px;
         }
     }
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_2i2x0q1qobm4pldi.eot?t=1501669875868');
+    /* IE9*/
+    src: url('//at.alicdn.com/t/font_2i2x0q1qobm4pldi.eot?t=1501669875868#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_2i2x0q1qobm4pldi.woff?t=1501669875868') format('woff'), /* chrome, firefox */
+    url('//at.alicdn.com/t/font_2i2x0q1qobm4pldi.ttf?t=1501669875868') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_2i2x0q1qobm4pldi.svg?t=1501669875868#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dianying:before {
+    content: "\e606";
 }

@@ -26,7 +26,7 @@ class WillShow extends Component {
                     <li className={this.state.index === 0?'active':''} onClick = {() => this.setState(
                         {index:0})}>
                         <p>全部点映</p>
-                        <img src="../../../../assets/images/s1.jpg" alt=""/>
+                        <img src="assets/images/s1.jpg" alt=""/>
                     </li>
                      {this.props.MovieNow.map( (item,index) => {
                     return   <li key={index} className={this.state.index === index+1?'active':''} onClick={

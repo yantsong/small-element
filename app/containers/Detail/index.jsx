@@ -49,7 +49,7 @@ class Detail extends React.Component {
                 <MovieDesc data = {this.props.nowInfo}></MovieDesc>
                 <p className = "desc-title">{summary}</p>
                 <div className="desc-footer">
-                    <Link to = '/mainpage/movielistpage'  className = "more-movie">更多电影</Link>
+                                <Link to='/mainpage/movielistpage' className="more-movie"><i className="iconfont icon-dianying"></i><br/>更多电影</Link>
                     <Link to = '/action'>发起点映</Link>
                    
                 </div>

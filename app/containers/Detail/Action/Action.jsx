@@ -10,23 +10,11 @@ class Action extends Component {
     constructor (props, context) {
         super(props, context)
         this.state = {
-            inputValue: 40,
+            inputValue: 100,
             title:'这是活动标题，你可以修改他',
-            desc: `这是活动简介，你可以修改他。其实，睡你和被你睡是差不多的，无非是
-                    两具肉体碰撞的力，无非是这力催开的花朵
-                    无非是这花朵虚拟出的春天让我们误以为生命被重新打开
-                    大半个中国，什么都在发生：火山在喷，河流在枯
-                    一些不被关心的政治犯和流民
-                    一路在枪口的麋鹿和丹顶鹤
-                    我是穿过枪林弹雨去睡你
-                    我是把无数的黑夜摁进一个黎明去睡你
-                    我是无数个我奔跑成一个我去睡你
-                    当然我也会被一些蝴蝶带入歧途
-                    把一些赞美当成春天
-                    把一个和横店类似的村庄当成故乡
-                    而它们
-                    都是我去睡你必不可少的理由`,
+            desc: `这是活动简介，你可以修改他,你可以在这里介绍一些活动相关的信息`,
             ifyouare:'这里也是自定义内容区,你可以修改',
+            wechat:'购票之后,请加我微信,也可以不加,或者改这里',
             time: new Date(),
             isOpen: false,
             show:false,
@@ -78,6 +66,11 @@ class Action extends Component {
                 text:this.state.ifyouare
             })
             break;
+        case 'wechat':
+            this.setState({
+                text:this.state.wechat
+            })
+            break;
     
         default:
             break;
@@ -102,6 +95,12 @@ class Action extends Component {
             case 'ifyouare':
                  this.setState({
                     ifyouare : this.text.value,
+                    text: this.text.value
+                })
+                break;
+            case 'wechat':
+                 this.setState({
+                    wechat : this.text.value,
                     text: this.text.value
                 })
                 break;
@@ -163,14 +162,14 @@ class Action extends Component {
                          
                            <Slider min={40} max={500}  
                             step={10}
-                            defaultValue = {40}
+                            defaultValue = {100}
                             onChange={this.onChange.bind(this)} 
                             value={this.state.inputValue} />
 
                         <InputNumber
                             min={40}
                             max={500}
-                            defaultValue = {40}
+                            defaultValue = {100}
                             step={10}
                             style={{ marginLeft: 12 }}
                             value={this.state.inputValue}
@@ -216,11 +215,15 @@ class Action extends Component {
                             <h5>如果你是 <span onClick={this.editor.bind(this, 'ifyouare')}> <i className="iconfont icon-bianji"></i> 个性编辑</span> </h5>
                                 <p>{this.state.ifyouare}</p>
                             </li>
+                            <li>
+                            <h5>如果你是 <span onClick={this.editor.bind(this, 'wechat')}> <i className="iconfont icon-bianji"></i> 个性编辑</span> </h5>
+                                <p>{this.state.wechat}</p>
+                            </li>
 
                             <li>
                                 <h5>联系方式</h5>
-                                <input type="text" placeholder = "请输入姓名(必填)" onChange={this.inputchange.bind(this)}  ref = {(input) =>{this.name = input}}/>
-                                <input type="text" placeholder = "请输入手机(必填)" onChange={this.inputchange.bind(this)}  ref = {(input) =>{this.phone = input}}/>
+                                <input type="text" placeholder = "请输入姓名(必填)" onKeyDown={this.inputchange.bind(this)}  ref = {(input) =>{this.name = input}}/>
+                                <input type="text" placeholder="请输入手机(必填)" onKeyDown={this.inputchange.bind(this)}  ref = {(input) =>{this.phone = input}}/>
                             </li>
                         </ul>
                        
