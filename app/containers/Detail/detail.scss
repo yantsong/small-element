@@ -1,14 +1,14 @@
 .detail-page {
     position: relative;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 50px 10px;
     height: 100%;
     overflow-x: hidden;
     h1 {
-        font-size: 18px;
-        line-height: 36px;
+        font-size: 20px;
+        line-height: 40px;
         color: #28AEAC;
     }
-    p {
+    .desc-title {
         margin-top: 5px;
         font-size: 13px;
         line-height: 26px;
