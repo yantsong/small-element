@@ -78,41 +78,20 @@
                 border: 1px solid gray;
                 margin: 5px 0;
                 border-radius: 3px;
-                line-height: 52px;
+                line-height: 50px;
+                height: 50px;
                 font-size: 16px;
             }
         }
     }
-    .action-footer {
-        font-size: 16px;
-        background-color: white;
-        height: 50px;
-        width: 100%;
-        margin: 0 -10px;
-        em {
-            width: 75%;
+    .timePicker {
+        line-height: 50px;
+        padding: 5px 10px;
+        i {
+            float: right;
             height: 50px;
             line-height: 50px;
-            font-style: normal;
-            display: inline-block;
-            color: black;
-            box-shadow: inset 0px -1px 1px -1px;
-            padding-left: 10px;
-            i {
-                color: #FF595F;
-                font-weight: 600;
-            }
-        }
-        a {
-            width: 25%;
-            height: 50px;
-            line-height: 50px;
-            color: white;
-            font-size: 16px;
-            background-color: #CCCCCC;
-        }
-        a.active {
-            background-color: #FF595F;
+            font-size: 30px;
         }
     }
     .editor {
@@ -123,6 +102,7 @@
         top: 0;
         transition: 0.3s;
         background-color: white;
+        padding: 20px 10px 0 10px;
         z-index: 10;
         textarea {
             width: 100%;
@@ -153,4 +133,66 @@
             right: 0;
         }
     }
+}
+
+.action-footer {
+    font-size: 16px;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    margin: 0 -10px;
+    em {
+        width: 75%;
+        height: 50px;
+        line-height: 50px;
+        font-style: normal;
+        display: inline-block;
+        color: black;
+        padding-left: 20px;
+        box-shadow: inset 0px 1px 1px -1px;
+        i {
+            color: #FF595F;
+            font-weight: 600;
+        }
+    }
+    a {
+        width: 25%;
+        height: 50px;
+        line-height: 50px;
+        color: white;
+        font-size: 16px;
+        background-color: #CCCCCC;
+        display: inline-block;
+        text-align: center;
+    }
+    a.active {
+        background-color: #FF595F;
+    }
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_njqtncxft58qia4i.eot?t=1501608379449');
+    /* IE9*/
+    src: url('//at.alicdn.com/t/font_njqtncxft58qia4i.eot?t=1501608379449#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_njqtncxft58qia4i.woff?t=1501608379449') format('woff'), /* chrome, firefox */
+    url('//at.alicdn.com/t/font_njqtncxft58qia4i.ttf?t=1501608379449') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_njqtncxft58qia4i.svg?t=1501608379449#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-rili:before {
+    content: "\e704";
+}
+
+.icon-bianji:before {
+    content: "\e62f";
 }

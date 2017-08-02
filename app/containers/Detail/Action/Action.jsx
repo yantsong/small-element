@@ -4,6 +4,7 @@ import MovieDesc from '../../../components/MovieDesc/MovieDesc'
 import { Slider, InputNumber, Row, Col } from 'antd'
 import DatePicker from 'react-mobile-datepicker';
 import moment from 'moment'
+import {addMyMovie} from '../../../redux/actions/action.js'
 import './Action.scss'
 class Action extends Component {
     constructor (props, context) {
@@ -11,12 +12,12 @@ class Action extends Component {
         this.state = {
             inputValue: 40,
             title:'这是活动标题，你可以修改他',
-            desc:'这是活动简介，你可以修改他。 明天启七年，北镇抚司锦衣卫沈炼（张震 饰）在一次扫除乱党任务中，为救画师北斋（杨幂 饰），将同僚凌云铠（武强 饰）灭口。裹挟在乱世，沈炼与北斋情陷其中，却越陷越深。而在这一切的背后，巨大阴谋正暗中布局。众生如蝼蚁囿于修罗场，逆鳞之战，一触即发……',
-            ifyouare:'这里也可以修改',
+            desc:'这是活动简介，你可以修改他。',
+            ifyouare:'这里也是自定义内容区,你可以修改',
             time: new Date(),
             isOpen: false,
             show:false,
-            text:'测试测试测试',
+            text:'请输入你自定义的内容',
             active:'',
             heighLight:false,
             name:'',
@@ -46,34 +47,64 @@ class Action extends Component {
  editor(item){
      this.setState({
          show:true,
-         active:item
+         active:item,
      })
+    switch (item) {
+        case 'title':
+            this.setState({
+                text:this.state.title
+            })
+            break;
+        case 'desc':
+            this.setState({
+                text:this.state.desc
+            })
+            break;
+        case 'ifyouare':
+            this.setState({
+                text:this.state.ifyouare
+            })
+            break;
+    
+        default:
+            break;
+    }
  }
-    changeHtml(){
+    changeHtml(onoff){
         let value = this.state.active.toString();
-        console.log(value);
         switch (value) {
             case 'title':
                  this.setState({
-                    title : this.text.value
+                    title : this.text.value,
+                    text: this.text.value
                 })
                 break;
             case 'desc':
                  this.setState({
-                    desc : this.text.value
+                    desc : this.text.value,
+                    text: this.text.value
+                    
                 })
                 break;
             case 'ifyouare':
                  this.setState({
-                    ifyouare : this.text.value
+                    ifyouare : this.text.value,
+                    text: this.text.value
                 })
                 break;
             default:
                break;
         }
-        this.setState({
-           show:false
-        })
+            console.log(onoff);
+            if (!onoff) {
+                this.setState({
+                show:true
+                })
+            }else{
+                this.setState({
+                    show: false
+                })
+            }
     }
     cancel(){
         this.setState({
@@ -86,11 +117,28 @@ class Action extends Component {
             name:this.name.value,
             phone:this.phone.value
         })
+        this.state.name && this.state.phone ?
+            this.setState(
+                {
+                    heighLight: true
+                }
+            ) : this.setState(
+                {
+                    heighLight: false
+                }
+            )
+    }
+    addActionMovie(data){
+       this.props.addMovie(data);
+       const path = `/mainpage/userpage`
+       this.context.router.push(path)
     }
 
 
 
     render () {
+        const item = this.state.active.toString()
+        console.log(item);
         return (
             <div className = "movie-action">
                 <div className="moviedesc">
@@ -120,12 +168,16 @@ class Action extends Component {
                         <div>
                             <h3>选择时间</h3>
                             <p className = "message-tip ">建议定在两周后,以便有时间准备</p>
+                            <div className="timePicker" onClick={this.handleClick.bind(this)}>
                             <a
-					className="select-btn"
-					onClick={this.handleClick.bind(this)}>
-                    {moment(this.state.time).format('LLL').toString()}
-                    <i></i>
-				</a>
+                                className="select-btn"
+                               >
+                                {moment(this.state.time).format('YYYY-MM-DD HH:mm:ss').toString()}
+                                <i></i>
+                            </a>
+                            <i className="iconfont icon-rili"></i>
+                            </div>
+                   
                           <DatePicker
                             value={this.state.time}
                             isOpen={this.state.isOpen}
@@ -138,17 +190,17 @@ class Action extends Component {
                         </div>
                         <ul className = "action-list">
                             <li>
-                                <h5>活动标语 <span onClick = {this.editor.bind(this,'title')}> <i></i> 个性编辑</span> </h5>
+                            <h5>活动标语 <span onClick={this.editor.bind(this, 'title')}> <i className="iconfont icon-bianji"></i> 个性编辑</span> </h5>
                                 <p>{this.state.title}</p>
                             </li>
 
                             <li>
-                                <h5>活动简介 <span onClick = {this.editor.bind(this,'desc')}> <i></i> 个性编辑</span> </h5>
+                            <h5>活动简介 <span onClick={this.editor.bind(this, 'desc')}> <i className="iconfont icon-bianji"></i> 个性编辑</span> </h5>
                                 <p>{this.state.desc}</p>
                             </li>
 
                             <li>
-                              <h5>如果你是 <span onClick = {this.editor.bind(this,'ifyouare')}> <i></i> 个性编辑</span> </h5>
+                            <h5>如果你是 <span onClick={this.editor.bind(this, 'ifyouare')}> <i className="iconfont icon-bianji"></i> 个性编辑</span> </h5>
                                 <p>{this.state.ifyouare}</p>
                             </li>
 
@@ -158,32 +210,36 @@ class Action extends Component {
                                 <input type="text" placeholder = "请输入手机(必填)" onChange={this.inputchange.bind(this)}  ref = {(input) =>{this.phone = input}}/>
                             </li>
                         </ul>
-                        <div className="action-footer">
-                            <em>票价 <i>￥40起</i>  </em><a className = {this.state.heighLight?'active':''}>确认提交</a>
-                        </div>
+                       
                         <div className="editor" style = {this.state.show?{left:0}:{left:'100%'}}>
-                            <textarea   ref = {(text) =>{this.text = text}} defaultValue = {this.state.text}>
+                        <textarea ref={(text) => { this.text = text }} value={this.state.text} onChange={this.changeHtml.bind(this,0)}>
                             </textarea>
                             <div className="editor-footer">
                                 <a onClick = {this.cancel.bind(this)}>取消</a>
                                 <a onClick = {this.changeHtml.bind(this)}>确定</a>
                             </div>
                         </div>
-                    </div>                
+                    </div> 
+                    <div className="action-footer">
+                        <em>票价 <i>￥40起</i>  </em><a className={this.state.heighLight ? 'active' : ''} onClick={this.addActionMovie.bind(this, this.props.nowInfo)} >确认提交</a>
+                    </div>               
             </div>
         )
     }
     componentDidMount() {
-        this.setState(
-            {
-            heighLight: this.state.name&this.state.phone
-            }
-        )
+       
     }
+}
+
+Action.contextTypes = {
+    router: React.PropTypes.object
 }
 
 const mapDispatchToPorps = (dispatch) =>{
     return {
+        addMovie: (data) => {
+            dispatch(addMyMovie(data))
+        }
         }
     }
 

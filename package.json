@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev1": "webpack-dev-server --inline --port 8089 --host 172.20.10.2",
-        "dev": "webpack-dev-server --inline --port 8089 --host 192.168.0.100"
+        "dev": "webpack-dev-server --inline --port 8089 --host 192.168.1.104"
     },
     "author": "song",
     "license": "MIT",
