@@ -216,7 +216,7 @@ class Action extends Component {
                                 <p>{this.state.ifyouare}</p>
                             </li>
                             <li>
-                            <h5>如果你是 <span onClick={this.editor.bind(this, 'wechat')}> <i className="iconfont icon-bianji"></i> 个性编辑</span> </h5>
+                            <h5>加我微信 <span onClick={this.editor.bind(this, 'wechat')}> <i className="iconfont icon-bianji"></i> 个性编辑</span> </h5>
                                 <p>{this.state.wechat}</p>
                             </li>
 

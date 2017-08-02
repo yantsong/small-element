@@ -24,10 +24,10 @@ class Carousel extends Component {
         return (
             <div className="caro">
                <ReactSwipe className="carousel" swipeOptions={opt}>
-                <div className="carousel-item"><img src="assets/images/b1.jpg" alt=""/> </div>
-                <div className="carousel-item"><img src="assets/images/b2.jpg" alt=""/> </div>
-                <div className="carousel-item"><img src="assets/images/b3.jpg" alt=""/> </div>
-                <div className="carousel-item"><img src="assets/images/b4.jpg" alt=""/> </div>
+                    <div className="carousel-item"><img src="http://ou2puub88.bkt.clouddn.com/b1.jpg" alt=""/> </div>
+                    <div className="carousel-item"><img src="http://ou2puub88.bkt.clouddn.com/b2.jpg" alt=""/> </div>
+                <div className="carousel-item"><img src="http://ou2puub88.bkt.clouddn.com/b3.jpg" alt=""/> </div>
+                <div className="carousel-item"><img src="http://ou2puub88.bkt.clouddn.com/b4.jpg" alt=""/> </div>
             </ReactSwipe>
             <span>
                 <i className={this.state.index ===0?"active":''}></i>
