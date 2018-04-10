@@ -14,12 +14,16 @@ class MovieListPage extends Component {
             }
     }
     componentWillMount(){
+        console.log('willnount');
        let arr = this.genresArr()
        //并不会立即更新,现在加入了队列
        this.setState({
           genres: arr 
        }
        )
+    }
+    componentWillUpdate() {
+        console.log('ýeah');
     }
     render () {
         const movielist = this.state.movielist;

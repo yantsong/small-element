@@ -16,8 +16,9 @@ class MovieThumb extends Component {
         const min = date.getMinutes()>10?date.getMinutes():'0'+ date.getMinutes();
         if (!this.props.MovieAction) return(<div></div>);
         const{title,casts,images} = this.props.MovieAction
-        const avater = casts[0].avatars.small
-        const username =  casts[0].name
+ 
+        const avater = casts[0] ? casts[0].avatars.small:'自定义'
+        const username =  casts[0] ? casts[0].name: '自定义'
         const imgsrc = images.medium
         const num = parseInt(Math.random()*150)
 
