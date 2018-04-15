@@ -16,7 +16,7 @@ moment.locale('zh-cn');
 const store = configureStore();
             store.subscribe(
                 () =>
-            console.log(1,store.getState()))
+            console.log(2,store.getState()))
   render(
         <Provider store={store}>
             <RouteMap history={hashHistory} />
